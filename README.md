@@ -1,10 +1,6 @@
-Thank you for clarifying the noise injection process. Here’s the corrected README with the precise explanation that **noise injection** involves introducing samples from the opposite class, and that **inverse sampling** increases the complexity of data distribution, making prediction more challenging.
+# Improved noise-filtering algorithm for AdaBoost using the inter-and intra-class variability of imbalanced datasets
 
----
-
-# Improved Noise-Filtering Algorithm for AdaBoost Using Sample Weight-Based Noise Detection in Imbalanced Datasets
-
-This repository provides an implementation of a noise-filtering algorithm for AdaBoost, developed to improve classification accuracy in imbalanced datasets. By setting specific sample weight-based thresholds, the algorithm distinguishes between noise and essential minority samples, enhancing AdaBoost’s robustness in challenging, imbalanced data contexts.
+This repository provides an implementation improved noise filtering method for AdaBoost, developed to improve classification accuracy in imbalanced datasets. By setting specific sample weight-based thresholds, the algorithm distinguishes between noise and essential minority samples, enhancing AdaBoost’s robustness in challenging, imbalanced data contexts.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -15,12 +11,12 @@ This repository provides an implementation of a noise-filtering algorithm for Ad
 - [Citation](#citation)
 
 ## Overview
-In imbalanced datasets, classifiers like AdaBoost often misclassify minority samples as noise, which impacts overall performance. This repository introduces a noise-filtering algorithm with distinct sample weight-based thresholds using absolute and modified SIQR-based criteria. The experimental design includes tests on the original dataset and noise-injected datasets, created with **direct and inverse sampling adjustments** to evaluate the effectiveness of noise detection and prediction performance.
+In imbalanced datasets, noise-filtering method with AdaBoost such as ORBoost and RUSBostWO often misclassify minority samples as noise, which impacts overall performance. This repository introduces a improved noise-filtering algorithm with distinct sample weight-based thresholds using absolute and modified SIQR-based criteria. The experimental design includes tests on the original dataset and noise-injected datasets, created with **direct and inverse methods** to evaluate the effectiveness of noise detection and prediction performance.
 
 ### Key Features:
 - **Weight-Based Noise Filtering**: Employs sample weight thresholds with absolute and modified SIQR-based criteria.
-- **Noise Injection via Direct and Inverse Sampling**: Introduces noise by adding opposite class samples to specific regions based on dnn values.
-- **Improved Generalization**: Limits over-filtering of minority samples, improving AdaBoost performance on imbalanced data.
+- **Noise Injection via Direct and Inverse method**: Introduces noise by adding opposite class samples to specific regions based on dnn values.
+- **Improved Generalization**: Limits over-filtering of minority samples, improving noise-filtering based AdaBoost performance on imbalanced data.
 
 ## Data
 The algorithm was validated on multiple imbalanced datasets, showing consistent performance across different imbalance ratios and data distributions.
