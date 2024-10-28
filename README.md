@@ -35,8 +35,8 @@ The noise-filtering algorithm establishes noise thresholds through two main appr
 ### Experimental Design: Noise Injection via Direct and Inverse Sampling Based on dnn
 The experimental setup includes baseline tests on the **original dataset** and noise-injected datasets created by introducing samples from the opposite class based on **direct and inverse sampling** adjustments using **dnn** values:
 - **dnn** means ratio of the intra/inter class nearest neighbor distance.
-- **Direct Sampling**: Samples closer to the opposite class than to their own class receive higher sampling weights, generating noise samples around these boundary samples. It is likely to generate overlapping region near the boundary area. 
-- **Inverse Sampling**: In this approach, samples closer to their own class receive higher weights, injecting opposite-class noise into areas with safe area. This added noise complexity in safe regions makes the data distribution more challenging for prediction.
+- **Direct method**: Samples closer to the opposite class than to their own class receive higher sampling weights, generating noise samples around these boundary samples. It is likely to generate overlapping region near the boundary area. 
+- **Inverse method**: In this approach, samples closer to their own class receive higher weights, injecting opposite-class noise into areas with safe area. This added noise complexity in safe regions makes the data distribution more challenging for prediction.
 
 ## Results
 
@@ -46,7 +46,7 @@ However, for the case of RUSBostWO, the degree of noise detection changes become
 
 ### Prediction Performance on Original and Noise-Injected Data
 The prediction experiments on both original and noise-injected datasets confirmed the effectiveness of the algorithm. According to the conclusions:
-- **Case 1 vs Case 2** : The prediction performance of using **Case 1** is more improved than **Case 2**.
+- **Case 1 vs Case 2** : The prediction performance of using **Case 1** is more improved than the performance of using **Case 2**.
 - **Original Data Performance**: The algorithm improved minority sample retention by reducing misclassification, enhancing overall prediction performance over traditional noise-filtering AdaBoost (ORBoost, RUSBostWO).
 - **Noise-Injected Data Performance**: In the case of using both **Direct** and **Inverse**, proposed noise filtering method showed improved prediction performance. 
 
