@@ -32,8 +32,8 @@ The noise-filtering algorithm establishes noise thresholds through two main appr
 2. **Case 2: Modified SIQR-Based Noise Filtering**  
    This approach uses a modified form of the semi-interquartile range (SIQR) to determine adaptive noise thresholds. The traditional SIQR is adjusted to consider the skewness of sample weight distribution. 
 
-### Experimental Design: Noise Injection via Direct and Inverse Sampling Based on dnn
-The experimental setup includes baseline tests on the **original dataset** and noise-injected datasets created by introducing samples from the opposite class based on **direct and inverse sampling** adjustments using **dnn** values:
+### Experimental Design: Noise Injection via Direct and Inverse method Based on dnn
+The experimental setup includes baseline tests on the **original dataset** and noise-injected datasets created by introducing samples from the opposite class based on **direct and inverse method** adjustments using **dnn** values:
 - **dnn** means ratio of the intra/inter class nearest neighbor distance.
 - **Direct method**: Samples closer to the opposite class than to their own class receive higher sampling weights, generating noise samples around these boundary samples. It is likely to generate overlapping region near the boundary area. 
 - **Inverse method**: In this approach, samples closer to their own class receive higher weights, injecting opposite-class noise into areas with safe area. This added noise complexity in safe regions makes the data distribution more challenging for prediction.
